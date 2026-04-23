@@ -1,6 +1,3 @@
 {
-  "buildCommand": "cd divot && npm run build",
-  "outputDirectory": "divot/.next",
-  "installCommand": "cd divot && npm install",
-  "framework": "nextjs"
+  "root": "divot"
 }
