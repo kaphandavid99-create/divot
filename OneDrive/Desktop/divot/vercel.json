@@ -1,6 +1,0 @@
-{
-  "buildCommand": "cd divot && npm run build",
-  "devCommand": "cd divot && npm run dev",
-  "installCommand": "cd divot && npm install",
-  "outputDirectory": "divot/.next"
-}
