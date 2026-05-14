@@ -156,6 +156,11 @@ const CarsPage = () => {
           transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
         }
         
+        .scroll-animate.visible {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        
         .slide-in-left {
           opacity: 0;
           transform: translateX(-50px);
