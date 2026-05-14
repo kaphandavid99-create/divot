@@ -156,6 +156,11 @@ const CarsPage = () => {
           transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
         }
         
+        .scroll-animate.visible {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        
         .slide-in-left {
           opacity: 0;
           transform: translateX(-50px);
@@ -216,7 +221,7 @@ const CarsPage = () => {
                 placeholder="Search by name, brand, or location..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent outline-none"
+                className="w-full px-4 py-2 border-2 border-sky-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent outline-none"
               />
               {searchTerm && (
                 <div className="mt-2 text-xs text-gray-500">
@@ -230,7 +235,7 @@ const CarsPage = () => {
               <select
                 value={activeTab}
                 onChange={(e) => setActiveTab(e.target.value as 'all' | 'rent' | 'buy')}
-                className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent outline-none"
+                className="px-3 py-2 border-2 border-sky-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent outline-none"
               >
                 <option value="all">All Vehicles</option>
                 <option value="rent">For Rent</option>
@@ -240,7 +245,7 @@ const CarsPage = () => {
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value as 'name' | 'price' | 'rating')}
-                className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent outline-none"
+                className="px-3 py-2 border-2 border-sky-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent outline-none"
               >
                 <option value="name">Sort by Name</option>
                 <option value="price">Sort by Price</option>
@@ -262,7 +267,7 @@ const CarsPage = () => {
 
           {/* Advanced Filters Panel */}
           {showFilters && (
-            <div className="mt-4 p-4 bg-gray-50 rounded-lg border border-gray-200 animate-fade-in">
+            <div className="mt-4 p-4 bg-gray-50 rounded-lg border-2 border-sky-300 animate-fade-in">
               <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-2">Price Range (FCFA)</label>

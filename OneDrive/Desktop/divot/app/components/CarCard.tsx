@@ -59,7 +59,7 @@ const CarCard = ({ id, name, price, image, category, location = "Douala, Cameroo
   return (
     <Link href={`/cars/${id}`} className="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-sky-500/20 transition-all duration-300 border border-gray-100 group h-full flex flex-col transform hover:-translate-y-1 block">
       {/* Image Container */}
-      <div className="relative h-56 overflow-hidden">
+      <div className="relative h-40 overflow-hidden">
         <Image
           src={image}
           alt={name}
@@ -88,7 +88,7 @@ const CarCard = ({ id, name, price, image, category, location = "Douala, Cameroo
       </div>
 
       {/* Content */}
-      <div className="p-6 flex-1 flex flex-col">
+      <div className="p-4 flex-1 flex flex-col">
         {/* Car Name */}
         <h3 className="text-xl font-bold text-black mb-2">{name}</h3>
         
